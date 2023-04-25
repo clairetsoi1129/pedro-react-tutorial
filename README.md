@@ -1,3 +1,25 @@
+# Notes:
+
+## How to start development
+```
+npx create-react-app .
+```
+
+## How to run development
+```
+npm start
+```
+
+## Go to web page
+> http://localhost:3000
+
+
+
+## What is component?
+
+> Component is reusable tag. It must start with Captial Letter. 
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
