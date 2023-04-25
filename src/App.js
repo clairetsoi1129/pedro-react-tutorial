@@ -1,7 +1,9 @@
 import './App.css';
 import {User} from './User';
 import {Planet} from './Planet';
-import {useState} from "react";
+import {Text} from './Text';
+import {useState, useEffect} from "react";
+import Axios from "axios";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -37,6 +39,43 @@ function App() {
     setInputValue(event.target.value);
   };
 
+  // fetch("https://catfact.ninja/fact")
+  // .then( (res) => res.json() )
+  // .then( (data) => {
+  //   console.log(data);
+  // } );
+
+  const [catFact, setCatFact] = useState("");
+  const [predictedAge, setPredictedAge] = useState(null);
+  const [input, setInput] = useState("");
+  const [excuser, setExcuser] = useState(null);
+
+  const fetchCatFact = () => {
+    Axios.get("https://catfact.ninja/fact").then((res) => {
+      setCatFact(res.data.fact);
+    });
+  };
+
+  const predictAge = () => {
+    Axios.get(`https://api.agify.io/?name=${input}`).then((res) => {
+      setPredictedAge(res.data);
+    });
+  };
+
+  const fetchExcuser = (category) => {
+    Axios.get(`https://excuser-three.vercel.app/v1/excuse/${category}`).then((res) => {
+      console.log(`excuser: ${res.data[0].excuse}`);
+      setExcuser(res.data[0]);
+    });
+  };
+
+  useEffect( () => {
+    fetchCatFact();
+    // predictAge();
+
+  }, []);
+
+  
 
   return (
     <div>
@@ -80,6 +119,30 @@ function App() {
       <button onClick={() => {setShowGreeting(!showGreeting)}}>Show/Hide</button> 
       <button onClick={() => {setTextColor(textColor === "black" ? "green": "black")}}>Black/Green</button>
       {showGreeting && <h1 style={{ color: textColor }}>Hello Pedro</h1>}
+
+      <h1>Lesson 6: Component Lifecycle, UseEffect Hook</h1>
+      <p> Component Lifecyle: Mounting, Updating, Unmounting.
+        UseEffect: do thing when component mount, eg. fetch data. 
+        if props/state change, it will call again. 
+        2nd params tell UseEffect when to trigger UseEffect again. If it is [], useEffect will only call once.
+      </p>
+
+      <Text />
+
+      <h1>Lesson 7: Fetch Data</h1>
+
+      <button onClick={fetchCatFact}>Generate Cat Fact</button> {catFact}
+      <br/>
+
+      <input placeholder="Ex. Pedro..." value={input} onInput={e => setInput(e.target.value)}/> 
+      <button onClick={predictAge}>Predict Age</button> <br/>
+      Predicted Age{predictedAge?.age} of {predictedAge?.name}
+
+      <h1>Generate an excuse</h1>
+      <button onClick={() => fetchExcuser("party")}>Party</button>
+      <button onClick={() => fetchExcuser("family")}>Family</button>
+      <button onClick={() => fetchExcuser("office")}>Office</button>
+      <p>Excuse: {excuser?.excuse} of Category {excuser?.category} </p>
 
     </div>
   );
