@@ -4,6 +4,7 @@
 ```
 npx create-react-app .
 npm install axios
+npm install react-router-dom
 ```
 
 ## How to run development
