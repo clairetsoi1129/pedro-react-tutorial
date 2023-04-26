@@ -4,7 +4,15 @@
 ```
 npx create-react-app .
 npm install axios
+
+> Lesson 9: React Router
+```
 npm install react-router-dom
+```
+
+> Lesson 10: React Query
+```
+npm install @tanstack/react-query
 ```
 
 ## How to run development

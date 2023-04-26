@@ -5,7 +5,7 @@ export const NavBar = () => {
     return (
         <div>
           <Link to="/">Home</Link> |
-          <Link to="/menu">Menu</Link> |
+          <Link to="/profile">Profile</Link> |
           <Link to="/contact">Contact</Link> |
 
           <Link to="/lesson2">Lesson2</Link> |
@@ -14,6 +14,7 @@ export const NavBar = () => {
 
           <Link to="/lesson6">Lesson6</Link> |
           <Link to="/lesson7">Lesson7</Link> |
+          <Link to="/lesson10">Lesson10</Link> |
 
         </div>
     );
