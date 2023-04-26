@@ -14,6 +14,10 @@ import {Lesson6} from "./pages/Lesson6";
 import {Lesson7} from "./pages/Lesson7";
 import {Lesson10} from "./pages/Lesson10";
 import {Form} from "./components/Form";
+import {Lesson12a} from "./pages/Lesson12a";
+import {Lesson12b} from "./pages/Lesson12b";
+import {Cat} from "./components/Cat";
+import {Counter} from "./components/Counter";
 
 import { useState, createContext } from 'react';
 
@@ -48,6 +52,10 @@ function App() {
             <Route path="/lesson7" element={<Lesson7 />} />
             <Route path="/lesson10" element={<Lesson10 />} />
             <Route path="/lesson11" element={<Form />} />
+            <Route path="/lesson12a" element={<Lesson12a />} />
+            <Route path="/lesson12b" element={<Lesson12b />} />
+            <Route path="/lesson12c" element={<Cat />} />
+            <Route path="/lesson12d" element={<Counter />} />
             <Route path="/*" element={<h1>404 Page not found</h1>} />
           </Routes>
         </Router>
