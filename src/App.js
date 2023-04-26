@@ -13,6 +13,7 @@ import {Lesson4} from "./pages/Lesson4";
 import {Lesson6} from "./pages/Lesson6";
 import {Lesson7} from "./pages/Lesson7";
 import {Lesson10} from "./pages/Lesson10";
+import {Form} from "./components/Form";
 
 import { useState, createContext } from 'react';
 
@@ -46,6 +47,7 @@ function App() {
             <Route path="/lesson6" element={<Lesson6 />} />
             <Route path="/lesson7" element={<Lesson7 />} />
             <Route path="/lesson10" element={<Lesson10 />} />
+            <Route path="/lesson11" element={<Form />} />
             <Route path="/*" element={<h1>404 Page not found</h1>} />
           </Routes>
         </Router>

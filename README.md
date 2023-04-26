@@ -15,6 +15,12 @@ npm install react-router-dom
 npm install @tanstack/react-query
 ```
 
+> Lesson 11: React Hook Form
+```
+npm install react-hook-form yup
+npm install @hookform/resolvers
+```
+
 ## How to run development
 ```
 npm start

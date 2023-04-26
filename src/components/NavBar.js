@@ -15,6 +15,7 @@ export const NavBar = () => {
           <Link to="/lesson6">Lesson6</Link> |
           <Link to="/lesson7">Lesson7</Link> |
           <Link to="/lesson10">Lesson10</Link> |
+          <Link to="/lesson11">Lesson11</Link> |
 
         </div>
     );
