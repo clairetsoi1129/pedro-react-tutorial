@@ -20,6 +20,8 @@ export const NavBar = () => {
           <Link to="/lesson12b">Lesson12b</Link> |
           <Link to="/lesson12c">Lesson12c</Link> |
           <Link to="/lesson12d">Lesson12d</Link> |
+          <Link to="/lesson13">Lesson13</Link> |
+
 
         </div>
     );

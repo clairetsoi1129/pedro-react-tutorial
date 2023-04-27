@@ -17,9 +17,15 @@ npm install @tanstack/react-query
 
 > Lesson 11: React Hook Form
 ```
+npm install prop-types
+```
+
+> Lesson 13: Typescript
+```
 npm install react-hook-form yup
 npm install @hookform/resolvers
 ```
+
 
 ## How to run development
 ```

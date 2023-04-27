@@ -18,6 +18,7 @@ import {Lesson12a} from "./pages/Lesson12a";
 import {Lesson12b} from "./pages/Lesson12b";
 import {Cat} from "./components/Cat";
 import {Counter} from "./components/Counter";
+import {Lesson13} from "./pages/Lesson13";
 
 import { useState, createContext } from 'react';
 
@@ -56,6 +57,8 @@ function App() {
             <Route path="/lesson12b" element={<Lesson12b />} />
             <Route path="/lesson12c" element={<Cat />} />
             <Route path="/lesson12d" element={<Counter />} />
+            <Route path="/lesson13" element={<Lesson13 />} />
+
             <Route path="/*" element={<h1>404 Page not found</h1>} />
           </Routes>
         </Router>
